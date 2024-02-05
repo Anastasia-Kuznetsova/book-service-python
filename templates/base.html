@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %} - Книжный сервис</title>
+    <style>
+        
+        .title {
+            margin: 5px;
+        }
+
+        .content {
+            margin: 5px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .book {
+            background: $white;
+            padding: 3em;
+            height: 320px;
+            border-radius: 20px;
+            border-left: 1px solid $white;
+            border-top: 1px solid $white;
+            backdrop-filter: blur(10px);
+            box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+            text-align: center;
+            position: relative;
+            transition: all 0.2s ease-in-out;
+            /* flex: 20%;
+            padding: 10px;
+            margin: 5px;
+            background-color: #F0FFF0;
+            inline-size: 100%; */
+        }
+
+        .discr {
+            padding: 10px;
+            margin: 5px;
+            background-color: #ffffff;
+            color: #8B4513;
+        }
+
+        .name a {
+            color: #8B4513;
+            text-decoration: none;
+        }
+
+        nav a {
+            color: #8B4513;
+            font-family: "Monotype Corsiva";
+            font-size: 3em;
+            margin-left: 50px;
+            text-decoration: none;
+        }
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('index') }}">Книжный сервис</a>
+        <a href="{{ url_for('create') }}">Добавить книгу</a>
+        <!--<a href="{{ url_for('instruction') }}">Инструкция</a>-->
+        <a href="{{ url_for('author') }}">Авторы</a>
+    </nav>
+    <hr>
+    <div class="content">
+        {% block content %} {% endblock %}
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+    <span class="name">
+        <h1>{% block name %} {{ author.name }}{% endblock %}</h1>
+    </span> 
+    <!--<div class="content">
+            <div class="book">
+                <b><p class="name">
+                    {% for author in book.author %}
+                        {{ author.name }}. 
+                    {% endfor %}
+                </p></b>
+                <p>{{ book.publ_year }} год.</p>
+                
+                <p>Жанр:</p>
+                 <div>
+                    {% for genre in book.genre %}
+                    {{genre.name}}. 
+                    {% endfor %}
+                </div>
+                
+                
+
+                <div class="discr">
+                    <h4>Описание</h4>
+                    <p>{{ book.description }}</p>
+                </div>
+            </div>
+    </div>--->
+{% endblock %}

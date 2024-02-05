@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class="name">{% block name %} Авторы {% endblock %}</h1>
+    <div class="content">
+            {% for author in authors %}
+            <div class="author">
+                <p><b><a href="{{ url_for('author', name=author.name)}}" style= "color: #8B4513; text-decoration: none">{{ author.name }}</a></b></p>
+                
+            {% endfor %}
+        
+
+{% endblock %}

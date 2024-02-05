@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 style="width: 100%">{% block title %} Добавить новую книгу {% endblock %}</h1>
+    <form method="post">
+        <p>
+            <label for="title">Название книги</label>
+            <input type="text" name="title"
+                   placeholder="Укажите название книги">
+            </input>
+        </p>
+        <p>
+            <label for="genre_title">Жанр</label>
+            <input type="text" name="genre_title"
+                    placeholder="Жанр">
+            </input>
+        </p>
+        <p>
+            <label for="author_name">Автор</label>
+            <input type="text" name="author_name"
+                   placeholder="Укажите автора">
+            </input>
+        </p>
+        <p>
+            <label for="publ_year">Год выпуска</label>
+            <input type="number" name="publ_year"
+                   placeholder="Год выпуска">
+            </input>
+        </p>
+        <p>
+        <label for="description">Описание</label>
+        <br>
+        <textarea name="description"
+                  placeholder="Описание"
+                  rows="15"
+                  cols="60"
+                  ></textarea>
+        </p>
+        <p>
+            <button type="submit" style="border: none;background: hsl(0 0% 93%);
+                border-radius: .25rem;
+                padding: .75rem 1rem; 
+                background: #D2B48C;color: white;
+                box-shadow: 0 .75rem .5rem -.5rem hsl(0 50% 80%)">
+            Отправить</button>
+        </p>
+    </form>
+{% endblock %}
